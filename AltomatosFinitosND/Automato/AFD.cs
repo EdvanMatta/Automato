@@ -10,7 +10,7 @@ namespace AltomatosFinitosND.Automato
     {
         public AFD(String er)
         {
-            this.expressaoRegular = er.ToCharArray();
+            this.expressaoRegular = er;
         }
 
        // public void desenha(int largura, int altura)
@@ -18,9 +18,9 @@ namespace AltomatosFinitosND.Automato
        //     throw new NotImplementedException();
        // }
 
-        //public void gerarEstados(String nomeTrasicao)
-       // {
-       //     throw new NotImplementedException();
-       // }
+        public void gerarEstados(String nomeTrasicao)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -17,45 +17,18 @@ namespace AltomatosFinitosND.Automato
             this.nome = nome;
         }
 
-        public string getNome()
-        {
-            //throw new NotImplementedException();
-            return nome;
-        }
+        public string getNome() { return nome;}
 
-        public void setNome(string nome)
-        {
-            //throw new NotImplementedException();
-            this.nome = nome;
-        }
+        public void setNome(string nome) { this.nome = nome;}
 
-        public void addTransicao(iTransicao elem)
-        {
-            //throw new NotImplementedException();
-            this.trans.Add(elem);
-        }
+        public void addTransicao(iTransicao elem) { this.trans.Add(elem);}
 
-        public void removeTrasicao(iTransicao elem)
-        {
-            //throw new NotImplementedException();
-            this.trans.Remove(elem);
-        }
+        public void removeTrasicao(iTransicao elem) { this.trans.Remove(elem);}
 
-        public List<iTransicao> getTransicoes()
-        {
-            //throw new NotImplementedException();
-            return this.trans;
-        }
+        public List<iTransicao> getTransicoes() { return this.trans;}
 
-        public bool getFinal()
-        {
-            throw new NotImplementedException();
+        public bool getFinal() { throw new NotImplementedException();}
 
-        }
-
-        public iTransicao getTrasicao(int index)
-        {
-            throw new NotImplementedException();
-        }
+        public iTransicao getTrasicao(int index) { throw new NotImplementedException();}
     }
 }

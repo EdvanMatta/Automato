@@ -30,7 +30,7 @@ namespace AltomatosFinitosND.Automato
 
                 Transicao t0 = new Transicao("");
                 t0.setPai(sConector);
-                t0.setProxEstado(s2);
+                t0.setProxEstado(s0);
 
                 Transicao t1 = new Transicao("");
                 t1.setPai(sConector);

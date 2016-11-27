@@ -13,5 +13,6 @@ namespace AltomatosFinitosND.Interface
          iEstado getPai();
          void setPai(iEstado estado);
          iEstado getProxEstado();
+         void setProxEstado(iEstado estado);
     }
 }

@@ -33,9 +33,9 @@ namespace AltomatosFinitosND.Automato
         {
             this.proxEstado = estado;
         }
-        public void setPai(iEstado parente)
+        public void setPai(iEstado pai)
         {
-            this.pai = parente;
+            this.pai = pai;
         }
         public iEstado getPai()
         {

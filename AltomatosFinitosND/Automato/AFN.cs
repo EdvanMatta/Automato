@@ -9,10 +9,10 @@ namespace AltomatosFinitosND.Automato
 {
     public class AFN : Automato
     {
-        public AFN(String expresaoRegular)
+        public AFN(String er)
         {
-            this.expressaoRegular = expresaoRegular.ToCharArray();
-            this.operarEstados(expresaoRegular);
+            this.expressaoRegular = er.ToCharArray();
+            this.operarEstados(er);
         }
 
         public iEstado getEstadoFim()
@@ -42,7 +42,7 @@ namespace AltomatosFinitosND.Automato
                     {
                         termoAux = "";
                         int x;
-                        for (x=(i + 1); x < expressao.Length && !(expressao[x].Equals(')')); x++)
+                        for (x = (i + 1); x < expressao.Length && expressao[x] != ')' /*!(expressao[x].Equals(')'))*/; x++)
                         {
                             termoAux += expressao[x];
                         }
@@ -50,12 +50,8 @@ namespace AltomatosFinitosND.Automato
                         this.operarEstados(termoAux);
                     }
                     else
-                    {
-                        //Console.WriteLine("valor de i: " + i);
-                        //Console.WriteLine("Expressão[i]: " + expressao[i]);
-                        //Console.WriteLine("Tamanho de expressao: " + expressao.Length);
-                        //Console.ReadKey();
-                        prox = expressao[i];
+                    { 
+                        prox = expressao[i + 1];
                         switch (prox)
                         {
                             case '+':

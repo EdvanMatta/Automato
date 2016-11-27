@@ -20,13 +20,13 @@ namespace AltomatosFinitosND
 
             Console.WriteLine("AFN Estado gerados algoritmo de Thompson da expressão: " + afnTeste);
             Console.WriteLine("Estado inicial: " + afn.getEstadoIni().getNome());
-            Console.WriteLine("Estado final: " + afn.getEstadoFim().getNome());
+            Console.WriteLine("Estado final: " + afn.getEstadoFim().getNome() + "\n");
             estados = afn.getEstado();
             for (int i = 0; i < estados.Count; i++)
             {
                 List<iTransicao> t = estados[i].getTransicoes();
                 Console.WriteLine(estados[i].getNome());
-                for (int x = 0; x < t.Count; x++)
+                for (int x = 0; x < t.Count(); x++)
                 {
                     Console.WriteLine("Objeto Transito: \n\t\t>>Pai " + t[x].getPai().getNome());
                     Console.WriteLine("\t\t>>" + t[x].getNome());

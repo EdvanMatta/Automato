@@ -73,8 +73,8 @@ namespace AltomatosFinitosND.Automato
                 t0.setProxEstado(s1);
 
                 Transicao t1 = new Transicao(nomeTransicao);
-                t1.setPai(s3);
-                t1.setProxEstado(s0);
+                t1.setPai(s0);
+                t1.setProxEstado(s3);
 
                 s0.addTransicao(t0);
                 s0.addTransicao(t1);
