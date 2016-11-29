@@ -42,7 +42,7 @@ namespace AltomatosFinitosND.Automato
                     {
                         termoAux = "";
                         int x;
-                        for (x = (i + 1); x < expressao.Length && expressao[x] != ')' /*!(expressao[x].Equals(')'))*/; x++)
+                        for (x = (i + 1); x < expressao.Length && !(expressao[x].Equals(')')); x++)
                         {
                             termoAux += expressao[x];
                         }
@@ -51,7 +51,7 @@ namespace AltomatosFinitosND.Automato
                     }
                     else
                     { 
-                        prox = expressao[i + 1];
+                        prox = expressao[i+1];
                         switch (prox)
                         {
                             case '+':

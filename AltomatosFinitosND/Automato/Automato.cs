@@ -24,7 +24,7 @@ namespace AltomatosFinitosND.Automato
 
         public List<iEstado> getEstado() { return this.estado; }
 
-        public int getTamanhoEstado() { return this.estado.Count(); }
+        public int tamanhoListaEstado() { return this.estado.Count; }
     
         public void removeEstado(iEstado estado){ this.estado.Remove(estado); }
 

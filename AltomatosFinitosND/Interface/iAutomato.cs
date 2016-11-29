@@ -11,7 +11,7 @@ namespace AltomatosFinitosND.Interface
          void setOperacao(iOperacao oper);
          void addEstado(iEstado estado);
          void removeEstado(iEstado estado);
-         int getTamanhoEstado();
+         int tamanhoListaEstado();
          void gerarEstados(String nomeTrasicao);
          List<iEstado> getEstado();
          void desenha(int largura, int altura);

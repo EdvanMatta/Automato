@@ -8,8 +8,8 @@ namespace AltomatosFinitosND.Interface
 {
     public interface iTransicao
     {
-         void setNome(String nome);
-         String getNome();
+         void setNomeTransicao(String nome);
+         String getNomeTransicao();
          iEstado getPai();
          void setPai(iEstado estado);
          iEstado getProxEstado();

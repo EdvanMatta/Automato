@@ -11,9 +11,9 @@ namespace AltomatosFinitosND.Interface
          void addTransicao(iTransicao elem);
          void removeTrasicao(iTransicao elem);
          List<iTransicao> getTransicoes();
-         String getNome();
-         void setNome(String nome);
-         Boolean getFinal();
+         String getNomeEstado();
+         void setNomeEstado(String nome);
+         Boolean getFinalEstado();
          iTransicao getTrasicao(int index);
     }
 }

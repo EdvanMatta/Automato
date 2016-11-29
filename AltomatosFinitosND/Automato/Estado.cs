@@ -9,17 +9,17 @@ namespace AltomatosFinitosND.Automato
 {
     public class Estado : iEstado
     {
-        private String nome;
+        private String nomeEstado;
         private List<iTransicao> trans = new List<iTransicao>();
 
         public Estado(String nome)
         {
-            this.nome = nome;
+            this.nomeEstado = nome;
         }
 
-        public string getNome() { return nome;}
+        public string getNomeEstado() { return nomeEstado;}
 
-        public void setNome(string nome) { this.nome = nome;}
+        public void setNomeEstado(string nome) { this.nomeEstado = nome;}
 
         public void addTransicao(iTransicao elem) { this.trans.Add(elem);}
 
@@ -27,7 +27,7 @@ namespace AltomatosFinitosND.Automato
 
         public List<iTransicao> getTransicoes() { return this.trans;}
 
-        public bool getFinal() { throw new NotImplementedException();}
+        public bool getFinalEstado() { throw new NotImplementedException();}
 
         public iTransicao getTrasicao(int index) { throw new NotImplementedException();}
     }

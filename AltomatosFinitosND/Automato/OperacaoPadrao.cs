@@ -12,7 +12,8 @@ namespace AltomatosFinitosND.Automato
         public void gerarEstados(String nomeTransicao, iAutomato automato)
         {
             int contEstado, contEstadoincial;
-            contEstado = contEstadoincial = automato.getTamanhoEstado();
+            contEstado = automato.tamanhoListaEstado();
+            contEstadoincial = contEstado;
 
             if (contEstadoincial > 0)
             {

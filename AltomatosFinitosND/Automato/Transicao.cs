@@ -9,36 +9,35 @@ namespace AltomatosFinitosND.Automato
 {
     class Transicao : iTransicao
     {
-        private String nome;
+        private String nomeTransicao;
         private iEstado proxEstado;
         private iEstado pai;
 
-        public Transicao(String nome)
-        {
-            this.nome = nome;
+        public Transicao(String nome) { 
+            this.nomeTransicao = nome; 
         }
-        public void setNome(String nome)
-        {
-            this.nome = nome;
+
+        public void setNomeTransicao(String nome) { 
+            this.nomeTransicao = nome; 
         }
-        public String getNome()
-        {
-            return this.nome;
+
+        public String getNomeTransicao() {
+            return this.nomeTransicao;
         }
-        public iEstado getProxEstado()
-        {
+
+        public iEstado getProxEstado() {
             return this.proxEstado;
         }
-        public void setProxEstado(iEstado estado)
-        {
+
+        public void setProxEstado(iEstado estado) {
             this.proxEstado = estado;
         }
-        public void setPai(iEstado pai)
-        {
+
+        public void setPai(iEstado pai) {
             this.pai = pai;
         }
-        public iEstado getPai()
-        {
+
+        public iEstado getPai() {
             return this.pai;
         }
     }

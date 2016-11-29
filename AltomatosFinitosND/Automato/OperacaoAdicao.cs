@@ -12,7 +12,9 @@ namespace AltomatosFinitosND.Automato
         public void gerarEstados(String nomeTransicao, iAutomato automato)
         {
             int contEstadoInicial, contEstado;
-            contEstadoInicial = contEstado = automato.getTamanhoEstado();
+            contEstado = automato.tamanhoListaEstado();
+            contEstadoInicial = contEstado;
+            
 
             if (contEstadoInicial > 0)
             {
@@ -22,21 +24,21 @@ namespace AltomatosFinitosND.Automato
                 Estado s1 = new Estado("S" + contEstado); contEstado++;
                 Estado s2 = new Estado("S" + contEstado); contEstado++;
 
-                Estado sConector = new Estado("S" + contEstadoInicial);
-                Transicao tConector = new Transicao("");
-                tConector.setPai(automato.getEstado()[contEstadoInicial - 1]);
-                tConector.setProxEstado(sConector);
-                automato.getEstado()[contEstadoInicial - 1].addTransicao(tConector);
+                Estado estado = new Estado("S" + contEstadoInicial);
+                Transicao transicao = new Transicao("");
+                transicao.setPai(automato.getEstado()[contEstadoInicial - 1]);
+                transicao.setProxEstado(estado);
+                automato.getEstado()[contEstadoInicial - 1].addTransicao(transicao);
 
                 Transicao t0 = new Transicao("");
-                t0.setPai(sConector);
+                t0.setPai(estado);
                 t0.setProxEstado(s0);
 
                 Transicao t1 = new Transicao("");
-                t1.setPai(sConector);
+                t1.setPai(estado);
                 t1.setProxEstado(s2);
 
-                sConector.addTransicao(t0);
+                estado.addTransicao(t0);
 
                 Transicao t2 = new Transicao(nomeTransicao);
                 t2.setPai(s0);
@@ -54,7 +56,7 @@ namespace AltomatosFinitosND.Automato
                 s1.addTransicao(t3);
                 s1.addTransicao(t4);
 
-                automato.addEstado(sConector);
+                automato.addEstado(estado);
                 automato.addEstado(s0);
                 automato.addEstado(s1);
                 automato.addEstado(s2);
